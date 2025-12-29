@@ -1,2 +1,0 @@
-# JKD-NEXUS-LTD
-website
