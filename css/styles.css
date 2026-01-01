@@ -1,0 +1,1255 @@
+body{
+  font-weight: "Montserrat";
+  text-align: center;
+  background-color: #E6E6E6;
+}
+:root {
+  /* Base Colors */
+  --color-background: #E6E6E6;   /* light gray background */
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #007bff;
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
+/* Default navbar padding */
+.Navbar {
+  position: sticky;
+   top: 0;
+   z-index: 9999;
+  background-color: #E6E6E6;
+  padding: 2% 10% 2%;
+  transition: padding-bottom 0.3s ease;
+}
+.navbar-toggler-icon {
+  width: 3.5em;
+  height: 3.5em;
+}
+.navbar-toggler {
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+
+  /* Menu */
+  .menu-header {
+    /* Layer order: pattern → dark overlay → image */
+    position: sticky;
+     top: 0;
+     z-index: 999;
+    background-image:
+      linear-gradient(
+        120deg,
+        rgba(255,255,255,0.04) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255,255,255,0.04) 50%,
+        rgba(255,255,255,0.04) 75%,
+        transparent 75%,
+        transparent
+      ),
+      linear-gradient(
+        rgba(0,31,61,0.75),
+        rgba(0,31,61,0.75)
+      ),
+      url('../images/products.png');
+
+    background-size:
+      150px 150px,     /* pattern */
+      cover,           /* color overlay */
+      contain;         /* image (NO CROPPING) */
+
+    background-position:
+      center,
+      center,
+      center;
+
+    background-repeat:
+      repeat,
+      no-repeat,
+      no-repeat;
+
+    background-color: #001F3D;
+    height: 500px;
+    position: relative;
+    color: #E6E6E6;
+  }
+
+
+  /* Overlay for menu header */
+  .menu-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,31,61,0.75);
+    transition: background 0.3s ease;
+  }
+
+  .menu-title-h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+  }
+
+  /* Back arrow style */
+  .back-arrow {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    z-index: 2;
+    font-size: 65px;
+    color: #E6E6E6;
+    background-color: rgba(0, 31, 61, 0.6); /* subtle circular background */
+    padding: 8px 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .arrow {
+    transition: transform 0.35s ease;
+  }
+
+  .back-arrow:hover {
+    background-color: #001F3D; /* darker hover */
+    transform: scale(1.2);       /* slight pop effect */
+    color: #FFD700;              /* golden hover icon */
+  }
+
+  .menu-card {
+    margin-bottom: 28px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,.75);
+  }
+
+  .menu-btn {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 50px 40px;
+    font-size: 45px;
+    font-weight: 600;
+    color: #001F3D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* 4️⃣ Full-width menu containers (excluding arrow/header) */
+  .mobile-menu .container {
+    max-width: 95%;
+  }
+  .menu-btn i:first-child {
+    margin-right: 12px;
+    font-size: 50px;
+  }
+
+  .menu-link {
+    font-size: 45px;
+    display: block;
+    padding: 45px 30px;
+    background: #001F3D;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu-link:active {
+    background: #003366;
+  }
+
+/* iOS-style soft glass card */
+.menu-card {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Gentle icon animation */
+.menu-btn i:first-child {
+  transition: transform .35s ease, color .35s ease;
+}
+
+/* Icon hover (visual only) */
+.menu-btn:hover i:first-child {
+  transform: scale(1.25) rotate(-3deg);
+  color: #007AFF; /* iOS blue */
+}
+
+
+/* Divider glow (very subtle) */
+.menu-card::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0,0,0,.08),
+    transparent
+  );
+}
+
+.JKD {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: -10px;  /* desktop positioning */
+}
+
+.jkd1 {
+  width: 90px;
+  position: absolute;
+  left: 5px;
+  top: 40px;   /* desktop positioning */
+}
+
+/* Responsive adjustments for screens ≤980px */
+@media (max-width: 980px) {
+  .JKD {
+    width: 130px;
+    position: absolute;
+    left: 0;
+    top: 10px;  /* desktop positioning */
+  }
+
+  .jkd1 {
+    width: 120px;
+    position: absolute;
+    left: 5px;
+    top: 75px;   /* desktop positioning */
+  }
+}
+
+
+/* Title image */
+
+/* Desktop: hide completely */
+.title-image {
+    display: none;
+}
+
+/* Tablet screens (iPad) */
+@media (max-width: 1024px) {
+    .title-image {
+        display: block;
+        width: 50%;           /* bigger width when on the right */
+        max-width: 80%;
+        position: relative;   /* normal flow */
+        margin-left: auto;    /* move to the right */
+        transform: rotate(0); /* remove rotation for cleaner layout */
+    }
+}
+
+/* Phone screens: still col-lg-6 behavior */
+@media (max-width: 480px) {
+    .title-image {
+        display: block;
+        width: 50%;           /* standard width on phone */
+        max-width: 80%;
+        position: relative;
+        right: auto;
+        transform: rotate(0); /* no rotation */
+        margin-left: 0;       /* align left on phone */
+    }
+}
+
+
+/* Slide body positioned to the right - desktop default */
+.xc_application .appl_intro .slide_body {
+  width: 1200px; /* desktop width */
+  height: 1200px; /* desktop height */
+  display: flex;
+  transform: rotate(30deg);
+  transform-origin: 50% 50%;
+  justify-content: flex-end; /* aligns to right side */
+  backface-visibility: hidden;
+  margin: 0;
+  position: absolute;
+  top: -50%;
+  right: 100px;
+  overflow: hidden;
+  width: 60%;
+  right: 5%;
+}
+
+/* Tablet/iPad screens: shrink slide */
+@media (max-width: 1024px) {
+  .xc_application .appl_intro .slide_body {
+    width: 700px;       /* reduce width */
+    height: 700px;      /* reduce height */
+    right: 2%;          /* adjust position */
+    transform: rotate(25deg); /* slightly less rotation for tablet */
+  }
+
+  .xc_application .appl_intro .slide_tile img {
+    border-radius: 8px; /* optional smaller rounding */
+  }
+}
+/* Each rail styling */
+.xc_application .appl_intro .slide_rail {
+  height: 100%;
+  position: relative;
+  user-select: none;
+  backface-visibility: hidden;
+  margin-left: 1%;
+}
+
+/* Rail inner container */
+.xc_application .appl_intro .slide_rail_inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* UL inside rail */
+.xc_application .appl_intro .slide_rail_inner ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slide tile styling */
+.xc_application .appl_intro .slide_tile {
+  margin-bottom: 0.3rem;
+  position: relative;
+  width: 100%;
+  border-radius: 0.06rem;
+  overflow: hidden;
+}
+
+/* Slide images - slightly rounded */
+.xc_application .appl_intro .slide_tile img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Ensures backface is hidden for 3D transforms */
+.xc_application .appl_intro .slide_body {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+/* Default: desktop / large screen (show only on large screens) */
+.title-image {
+    display: none; /* hide title image on desktop */
+}
+
+.xc_application {
+    display: block; /* show XC application on desktop */
+}
+
+/* Tablet and smaller screens: hide XC application, show title-image */
+@media (max-width: 1024px) { /* 1024px is typical iPad width */
+    .xc_application {
+        display: none; /* hide on tablet and smaller */
+    }
+
+    .title-image {
+        display: block; /* show on tablet and smaller */
+    }
+}
+
+/* Optional: small mobile screens (phones) */
+@media (max-width: 480px) {
+    .title-image {
+        width: 80%; /* adjust size for small screens */
+        right: 10%; /* reposition if needed */
+    }
+}
+.Container1{
+  position: relative;
+  border-radius: 10px;
+  background-color: #001F3D; /* base dark color */
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,0.04) 50%,
+      rgba(255,255,255,0.04) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: 150px 150px;
+  color: #E6E6E6;
+
+}
+#title {
+  position: relative;
+  background-color: #001F3D; /* base dark color */
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,0.04) 50%,
+      rgba(255,255,255,0.04) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: 150px 150px;
+  color: #E6E6E6;
+  text-align: left;
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  #title {
+  height: 600px;
+  }
+}
+
+/* Right Fade */
+#title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;              /* width of the fade */
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Left Fade */
+#title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Top Fade */
+#title .top-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Bottom Fade */
+#title .bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  #title {
+    padding-bottom: 150px;
+  }
+}
+html{
+  scroll-behavior: smooth !important;
+}
+.Container-fluid{
+  padding: 5% 15% 5%;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Montserrat";
+
+}
+
+h2{
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+h3{
+  font-family: "Montserrat-bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+
+/* navbar */
+.navbar-brand {
+  position: relative;
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: transparent;;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+   left: -180px; /* move left */
+  top: 65px;         /* MOVE DOWN */
+}
+
+.nav{
+  position: relative;
+  font-family: "Ubuntu";
+  font-size: 1rem;
+  font-weight: bold;
+  color: transparent;;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  left: -180px; /* move left */
+  top: 60px;         /* MOVE DOWN */
+}
+.nav-item {
+  padding: 0 18px
+}
+.nav-link {
+  color: #001F3D !important;
+  font-size: 1.2rem;
+  font-family: "Montserrat-light";
+}
+.navbar .nav-link:hover {
+  color: #003f7d !important; /* optional hover */
+}
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.5rem;
+    border-radius: : 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+/* Download button */
+.download-button{
+   margin: 5% 3% 5% 0;
+}
+
+.title-h1 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  position: relative;
+  left: -15%;
+}
+/* iPad & below */
+@media (max-width: 991px) {
+  .title-h1 {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    position: static; /* disables relative positioning */
+    left: 0;          /* removes offset */
+  }
+}
+
+/* Phone */
+@media (max-width: 575px) {
+  .title-h1 {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    position: static; /* disables relative positioning */
+    left: 0;          /* removes offset */
+  }
+}
+
+/* Carousel-item */
+.item-card {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 1px solid #eaeaea;
+  font-size: 1.25rem;
+}
+.carousel-inner .row {
+  margin: 0 -5px;
+}
+.carousel-inner .col-12,
+.carousel-inner .col-sm-6,
+.carousel-inner .col-md-4 {
+  padding: 0 5px;
+}
+.small-img {
+  width: 80%; /* 80% of column */
+  height: auto;
+  margin: 0 auto;
+}
+.carousel-inner .row {
+  display: flex;
+}
+#imageCarousel .carousel-inner .carousel-item {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  transition: transform 0.5s ease;
+}
+
+/* product-section */
+.product-section {
+  position: relative;
+  padding: 100px 20px;
+  background: #E6E6E6;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid */
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* Product Card */
+.product-card {
+  width: 420px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  overflow: hidden;
+
+  /* Stronger, subtle shadow for light mode */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Remove movement on hover but enhance shadow slightly */
+.product-card:hover {
+  transform: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-line {
+  width: 90%;                                  /* shorter line */
+  height: 1.5px;                               /* thin, elegant */
+  margin: 15px auto;                           /* vertical spacing + center horizontally */
+  background: #fff;                             /* fallback background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  border-radius: 1px;                           /* smooth edges */
+}
+
+
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Figure & Image */
+.product-card figure {
+  margin: 0;
+  overflow: hidden; /* contain zoom */
+}
+
+.product-card figure img {
+  width: 70%;           /* shrink image */
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;       /* center the image horizontally */
+  transition: transform 0.3s ease; /* smooth zoom */
+}
+
+/* Zoom only on hover over image */
+.product-card figure:hover img {
+  transform: scale(1.08);
+}
+
+/* Product Text */
+.product-card .product-text {
+  padding: 15px 12px;
+}
+
+.product-card .product-text strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #001F3D;
+  margin-bottom: 10px;
+}
+
+/* Product info with icons */
+.product-card .proinfo p {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin: 6px 0;
+}
+.product-card .proinfo p span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.product-card .proinfo p b {
+  color: #001F3D;
+}
+
+/* More button */
+.product-card .promore {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #001F3D;
+  cursor: pointer;
+}
+.product-card .promore i {
+  font-style: normal;
+  margin-left: 4px;
+  display: inline-block;
+  font-size: 1rem;
+  transform: translateY(1px);
+  transition: 0.3s;
+}
+.product-card .promore:hover i {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-grid {
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 1028px) {
+
+  #title{
+    text-align: center;
+  }
+
+  .title-image{
+    position: static;
+    transform: rotate(30deg);
+    margin-top: 20px;
+    width: 70%;
+    margin-right: 100px;
+  }
+}
+.pricing-h2{
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+  /* <!-- Call to Action --> */
+
+#cta{
+  background-color: #001F3D; /* base dark color */
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,0.04) 50%,
+      rgba(255,255,255,0.04) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: 150px 150px;
+  color: #E6E6E6;
+  overflow: hidden;
+}
+.cta-h3{
+    font-family: "Montserrat";
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+  /* <!-- Footer --> */
+  #footer {
+  background: #E6E6E6;
+  padding: 40px 0 20px;
+  color: #E6E6E6;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  color: #001F3D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.fa-instagram:hover { color: #E1306C; }
+.fa-envelope:hover  { color: #FFD700; }
+.fa-whatsapp:hover  { color: #25D366; }
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+/* Navbar customization */
+   #navbar-jkd {
+     background: #001F3D;
+     padding: 1.5rem 1.5rem;
+     border-radius: 10px;
+     margin-bottom: 30px;
+     position: sticky;
+     top: 0;                 /* sticks inside parent */
+     z-index: 9999;
+     margin: 0;              /* 🔑 merge with container */
+   }
+
+   #navbar-jkd .navbar-brand {
+     font-weight: bold;
+     color: #E6E6E6;
+     font-size: 1.8rem;
+     letter-spacing: 1px;
+     margin-left: 370px;    /* move right */
+   }
+
+   #navbar-jkd .nav-link {
+     color: #E6E6E6 !important;
+     font-weight: 600;
+     margin: 0 12px;
+     font-size: 1.1rem;
+     position: relative;
+   }
+   /* Mobile & iPad adjustments */
+@media (max-width: 992px) {
+  #navbar-jkd .nav-link {
+    font-size: 2.5rem;     /* slightly bigger text */
+    margin: 12px 0;         /* vertical spacing */
+    display: block;         /* full tap width */
+    text-align: center;     /* cleaner mobile look */
+  }
+}
+
+
+
+   #navbar-jkd .nav-link:hover,
+   #navbar-jkd .nav-link.active {
+     color: #FFD700 !important;
+   }
+
+   /* Decorative underline animation */
+   #navbar-jkd .nav-link::after {
+     content: '';
+     display: block;
+     height: 3px;
+     background: #FFD700;
+     width: 0;
+     transition: width 0.3s;
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     border-radius: 3px;
+   }
+
+   #navbar-jkd .nav-link:hover::after,
+   #navbar-jkd .nav-link.active::after {
+     width: 100%;
+   }
+
+   /* =============================== */
+/* SCROLLSPY CONTAINER - MOBILE & iPad Friendly */
+/* =============================== */
+.scrollspy-example {
+  position: relative;
+  height: 650px; /* You can adjust for smaller screens */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 25px;
+  border: 2px solid #001F3D;
+  border-radius: 15px;
+  background: #E6E6E6;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+/* Headings inside scrollspy */
+.scrollspy-example h4 {
+  position: relative;
+  padding-top: 25px;
+  margin-top: 25px;
+  border-left: 5px solid #001F3D;
+  padding-left: 18px;
+  color: #001F3D;
+  font-weight: 800;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Highlight the heading when active (Bootstrap Scrollspy) */
+.scrollspy-example .active {
+  border-left-color: #FFD700;
+  background: rgba(0, 31, 61, 0.1);
+  padding-left: 15px;
+  border-radius: 8px;
+}
+
+/* Paragraphs inside scrollspy */
+.scrollspy-example p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #001F3D;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+@media (max-width: 980px) {
+  .scrollspy-example p{
+    border-radius: 28px;
+  }
+}
+
+.scrollspy-example p:hover {
+  background: rgba(0,31,61,0.05);
+}
+
+/* Dropdown menu customization */
+.dropdown-menu {
+  background: #E6E6E6;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Dropdown item hover */
+.dropdown-item:hover {
+  background-color: #001F3D;
+  color: #FFD700 !important;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .5rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: #E6E6E6;
+    border: 0;
+}
+@media (max-width: 980px) {
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: #E6E66E6;
+    border: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .scrollspy-example {
+    height: 1500px; /* Smaller height for phones */
+    padding: 20px;
+  }
+
+  .scrollspy-example h4 {
+    font-size: 3rem;
+    padding-left: 16px;
+    border-left-width: 4px;
+  }
+
+  .scrollspy-example p {
+    font-size: 3rem;
+    padding: 14px;
+  }
+}
+/* Smooth collapsible animation */
+.collapsible-content {
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+  overflow: hidden;
+}
+
+
+   /* ICON WRAPPER */
+   .IEW {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;                 /* space between icons */
+     margin-top: 15px;
+   }
+   .IEW .fa-envelope {
+     border: 1px solid #001F3D;
+     border-radius: 20px;
+     width: 55px;
+     height: 40px;
+   }
+
+   .IEW .fa-instagram {
+     border: 1px solid #001F3D;
+     border-radius: 20px;
+     width: 55px;
+     height: 40px;
+   }
+
+   .IEW .fa-whatsapp {
+     border: 1px solid #001F3D;
+     border-radius: 20px;
+     width: 55px;
+     height: 40px;
+   }
+
+   /* INDIVIDUAL BRAND COLORS ON HOVER */
+   .IEW .fa-envelope:hover {
+     color: #ffd700;
+   }
+
+   .IEW .fa-instagram:hover {
+     color: #E1306C;
+   }
+
+   .IEW .fa-whatsapp:hover {
+     color: #25D366;
+   }
+
+   .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin-right: -35px; /* increased from -15px */
+  margin-left: -35px;  /* increased from -15px */
+}
+
+   /* Small screens (<768px): adjust or block */
+   @media (max-width: 990px) {
+     .col-md-7 {
+       display: block !important;   /* or display: none; if you want to hide */
+       -ms-flex: none !important;
+       flex: none !important;
+       max-width: 100% !important;
+       box-sizing: border-box;
+     }
+   }
+   @media (max-width: 980px) {
+  .col-md-5 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+   /* Larger screens (>=768px): default Bootstrap sizing */
+     .col-md-7 {
+       -ms-flex: 0 0 58.333333%;
+       flex: 0 0 58.333333%;
+       max-width: 58.333333%;
+     }
+   }
+
+
+.contact-icons li {
+ font-size: 15px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.contact-icons i {
+ width: 35px;
+ height: 35px;
+ border-radius: 50%;
+ background: #001F3D;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.contact-icons a {
+ color: #001F3D;
+ font-weight: 500;
+ text-decoration: none;
+}
+
+.contact-icons a:hover {
+ text-decoration: underline;
+}
+/* COLLAPSIBLE CONTACT - MOBILE & iPad */
+.get-in-touch-collapsible .contact-content {
+  display: none; /* initially collapsed */
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.get-in-touch-collapsible.open .contact-content {
+  display: block;
+}
+
+.toggle-contact {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.1); /* slight overlay */
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.toggle-contact i {
+  transition: transform 0.3s ease;
+}
+
+.get-in-touch-collapsible.open .toggle-contact i {
+  transform: rotate(180deg); /* arrow flips when open */
+}
+
+/* Optional: subtle iOS glassy effect */
+@media (max-width: 991px) {
+  .get-in-touch-collapsible .contact-content {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.85);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+}
+
+
+
+.Prdcts{
+  position: relative;
+  background-color: #001F3D; /* base dark color */
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,0.04) 50%,
+      rgba(255,255,255,0.04) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: 150px 150px;
+}
+
+/* Right Fade */
+.Prdcts::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;              /* width of the fade */
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Left Fade */
+.Prdcts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Top Fade */
+.Prdcts.top-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+/* Bottom Fade */
+.Prdcts .bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,31,61,0) 0%, #001F3D 100%);
+}
+
+.products{
+  width: 50%;
+  height: 50%;
+
+}
+
+.products-h1 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: #E6E6E6;
+  position: relative;
+  top: -300%;
+  left: -15%;
+}
+/* iPad & below */
+@media (max-width: 991px) {
+  .products-h1 {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    position: static; /* disables relative positioning */
+    left: 0;          /* removes offset */
+  }
+}
+
+/* Phone */
+@media (max-width: 575px) {
+  .products-h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    position: static; /* disables relative positioning */
+    left: 0;          /* removes offset */
+  }
+}
