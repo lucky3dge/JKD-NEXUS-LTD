@@ -7,9 +7,9 @@
 
 ## About
 
-**JKD NEXUS LIMITED** connects buyers with trusted Chinese suppliers, providing access to **high-quality products at the best prices**.  
+**JKD NEXUS LIMITED** is a professional trade and exchange company that connects buyers with trusted Chinese suppliers, providing access to **high-quality products at competitive prices**.
 
-We source a wide range of goods, including:
+We source a wide range of goods based on customer requirements, including:
 
 - 🏭 Machinery & Industrial Equipment  
 - 🚚 Trucks, Engines, Harvesters & Excavators  
@@ -18,7 +18,7 @@ We source a wide range of goods, including:
 - 🪑 Furniture & Building Materials  
 - 🏗️ Raw Materials & Consumer Goods  
 - ⚡ Used and Brand-New Electric Vehicles & Automobiles  
-- 📦 Any product based on your specific requirements  
+- 📦 Any product tailored to your needs  
 
 > Your reliable **link to China’s market**.
 
@@ -26,9 +26,14 @@ We source a wide range of goods, including:
 
 ## Key Features
 
-- 💱 **RMB & USD Exchange** – Safe, fast, and reliable currency exchange for smooth business transactions.  
-- 🔍 **Wide Product Sourcing** – Access trusted suppliers for almost any product you need.  
-- 🛠️ **Custom Services** – Tailored sourcing solutions for your business needs.  
+- 💱 **RMB & USD Exchange**  
+  Safe, fast, and reliable currency exchange for smooth business transactions with China.
+
+- 🔍 **Wide Product Sourcing**  
+  Direct access to trusted factories and suppliers.
+
+- 🛠️ **Custom Services**  
+  Transparent processes, clear communication, and customer-focused service delivery.
 
 ---
 
@@ -37,28 +42,38 @@ We source a wide range of goods, including:
 - **HTML5**  
 - **CSS3**  
 - **JavaScript (JS)**  
-- **Bootstrap 4.6 & 5**  
+- **Bootstrap 4.6 & Bootstrap 5**
 
-Built for a **responsive, modern, and user-friendly** web experience.
-
----
-
-## How to Use
-
-1. Open your web browser.  
-2. Visit [www.jkdnexuslimited.com](https://www.jkdnexuslimited.com)  
-3. Explore products, services, and currency exchange options.  
-4. Contact us for personalized sourcing or inquiries.  
-
-No installation required — fully web-based.
+Designed for a **responsive, modern, and user-friendly** experience across all devices.
 
 ---
 
-## Contact
+## Project Structure
 
-📧 Email: [jkdnexuslimited@gmail.com](mailto:jkdnexuslimited@gmail.com)  
-🌐 Website: [www.jkdnexuslimited.com](https://www.jkdnexuslimited.com)
-
----
-
-**JKD NEXUS LIMITED – Your Trusted Link to China’s Market** 🌏
+```text
+JKD-NEXUS-LIMITED/
+│
+├── index.html                 # Home page
+├── products.html              # Products & sourcing page
+├── about-us.html              # About Us page
+├── contact-us.html            # Contact Us page
+│
+├── menu/
+│   ├── mobile-menu.html       # Mobile & iPad navigation menu
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   └── style.css          # Custom styles
+│   │
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js
+│   │   └── main.js            # Custom JavaScript (menu toggle, interactions)
+│   │
+│   └── images/
+│       ├── products/
+│       ├── machines/
+│       └── branding/
+│
+├── favicon.ico
+└── README.md                  # Project documentation
