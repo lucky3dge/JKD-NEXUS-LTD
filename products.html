@@ -58,6 +58,17 @@
     <section>
     <div class="menu-header">
     </div>
+    <!-- Search -->
+  <form class="d-flex ms-lg-3 search-form" onsubmit="searchProducts(); return false;">
+    <input
+      id="searchInput"
+      class="form-control search-input"
+      type="search"
+      placeholder="Search products..."
+      onkeyup="searchProducts()"
+    >
+    <button class="btn search-btn" type="submit">Search</button>
+  </form>
     </section>
 
 
@@ -71,7 +82,7 @@
     <!-- Products 1–12 -->
 
     <!-- Product 1 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/1.jpg" class="card-img-top" alt="Product 1">
         <div class="card-body">
@@ -83,7 +94,7 @@
     </div>
 
     <!-- Product 2 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/2.jpg" class="card-img-top" alt="Product 2">
         <div class="card-body">
@@ -95,7 +106,7 @@
     </div>
 
     <!-- Product 3 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/3.jpg" class="card-img-top" alt="Product 3">
         <div class="card-body">
@@ -107,7 +118,7 @@
     </div>
 
     <!-- Product 4 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/4.jpg" class="card-img-top" alt="Product 4">
         <div class="card-body">
@@ -119,7 +130,7 @@
     </div>
 
     <!-- Product 5 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/5.jpg" class="card-img-top" alt="Product 5">
         <div class="card-body">
@@ -131,7 +142,7 @@
     </div>
 
     <!-- Product 6 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/6.jpg" class="card-img-top" alt="Product 6">
         <div class="card-body">
@@ -143,7 +154,7 @@
     </div>
 
     <!-- Product 7 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/7.jpg" class="card-img-top" alt="Product 7">
         <div class="card-body">
@@ -155,7 +166,7 @@
     </div>
 
     <!-- Product 8 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/8.jpg" class="card-img-top" alt="Product 8">
         <div class="card-body">
@@ -167,7 +178,7 @@
     </div>
 
     <!-- Product 9 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/9.jpg" class="card-img-top" alt="Product 9">
         <div class="card-body">
@@ -179,7 +190,7 @@
     </div>
 
     <!-- Product 10 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/10.jpg" class="card-img-top" alt="Product 10">
         <div class="card-body">
@@ -191,7 +202,7 @@
     </div>
 
     <!-- Product 11 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/11.jpg" class="card-img-top" alt="Product 11">
         <div class="card-body">
@@ -203,7 +214,7 @@
     </div>
 
     <!-- Product 12 -->
-    <div class="col-6 col-lg-4 mb-4">
+    <div class="col-6 col-lg-4 mb-4 product-item">
       <div class="card h-100">
         <img src="images/12.jpg" class="card-img-top" alt="Product 12">
         <div class="card-body">
@@ -222,7 +233,7 @@
 <div class="row">
 
   <!-- Product 13 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/13.jpg" class="card-img-top" alt="Product 13">
       <div class="card-body">
@@ -234,7 +245,7 @@
   </div>
 
   <!-- Product 14 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/14.jpg" class="card-img-top" alt="Product 14">
       <div class="card-body">
@@ -246,7 +257,7 @@
   </div>
 
   <!-- Product 15 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/15.jpg" class="card-img-top" alt="Product 15">
       <div class="card-body">
@@ -258,7 +269,7 @@
   </div>
 
   <!-- Product 16 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/16.jpg" class="card-img-top" alt="Product 16">
       <div class="card-body">
@@ -270,7 +281,7 @@
   </div>
 
   <!-- Product 17 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/17.jpg" class="card-img-top" alt="Product 17">
       <div class="card-body">
@@ -282,7 +293,7 @@
   </div>
 
   <!-- Product 18 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/18.jpg" class="card-img-top" alt="Product 18">
       <div class="card-body">
@@ -294,7 +305,7 @@
   </div>
 
   <!-- Product 19 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/19.jpg" class="card-img-top" alt="Product 19">
       <div class="card-body">
@@ -306,7 +317,7 @@
   </div>
 
   <!-- Product 20 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/20.jpg" class="card-img-top" alt="Product 20">
       <div class="card-body">
@@ -318,7 +329,7 @@
   </div>
 
   <!-- Product 21 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/21.jpg" class="card-img-top" alt="Product 21">
       <div class="card-body">
@@ -330,7 +341,7 @@
   </div>
 
   <!-- Product 22 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/22.jpg" class="card-img-top" alt="Product 22">
       <div class="card-body">
@@ -342,7 +353,7 @@
   </div>
 
   <!-- Product 23 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/23.jpg" class="card-img-top" alt="Product 23">
       <div class="card-body">
@@ -354,7 +365,7 @@
   </div>
 
   <!-- Product 24 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/24.jpg" class="card-img-top" alt="Product 24">
       <div class="card-body">
@@ -373,7 +384,7 @@
 <div class="row">
 
   <!-- Product 25 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/25.jpg" class="card-img-top" alt="Product 25">
       <div class="card-body">
@@ -385,7 +396,7 @@
   </div>
 
   <!-- Product 26 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/26.jpg" class="card-img-top" alt="Product 26">
       <div class="card-body">
@@ -397,7 +408,7 @@
   </div>
 
   <!-- Product 27 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/27.jpg" class="card-img-top" alt="Product 27">
       <div class="card-body">
@@ -409,7 +420,7 @@
   </div>
 
   <!-- Product 28 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/28.jpg" class="card-img-top" alt="Product 28">
       <div class="card-body">
@@ -421,7 +432,7 @@
   </div>
 
   <!-- Product 29 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/29.jpg" class="card-img-top" alt="Product 29">
       <div class="card-body">
@@ -433,7 +444,7 @@
   </div>
 
   <!-- Product 30 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/30.jpg" class="card-img-top" alt="Product 30">
       <div class="card-body">
@@ -445,7 +456,7 @@
   </div>
 
   <!-- Product 31 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/31.jpg" class="card-img-top" alt="Product 31">
       <div class="card-body">
@@ -457,7 +468,7 @@
   </div>
 
   <!-- Product 32 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/32.jpg" class="card-img-top" alt="Product 32">
       <div class="card-body">
@@ -469,7 +480,7 @@
   </div>
 
   <!-- Product 33 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/33.jpg" class="card-img-top" alt="Product 33">
       <div class="card-body">
@@ -481,7 +492,7 @@
   </div>
 
   <!-- Product 34 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/34.jpg" class="card-img-top" alt="Product 34">
       <div class="card-body">
@@ -493,7 +504,7 @@
   </div>
 
   <!-- Product 35 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/35.jpg" class="card-img-top" alt="Product 35">
       <div class="card-body">
@@ -505,7 +516,7 @@
   </div>
 
   <!-- Product 36 -->
-  <div class="col-6 col-lg-4 mb-4">
+  <div class="col-6 col-lg-4 mb-4 product-item">
     <div class="card h-100">
       <img src="images/36.jpg" class="card-img-top" alt="Product 36">
       <div class="card-body">
@@ -564,3 +575,4 @@
   </body>
 
   </html>
+
